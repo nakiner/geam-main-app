@@ -1,0 +1,14 @@
+{
+	"autoload":{
+		"psr-4":{
+			"ovl\\app\\": "./app",
+			"ovl\\app\\brain\\": "./app/brain",
+			"ovl\\app\\controllers\\": "./app/controllers",
+			"ovl\\app\\models\\": "./app/models",
+			"ovl\\app\\views\\": "./app/views"
+		}
+	},
+	"config": {
+		"optimize-autoloader": false
+	}
+}
