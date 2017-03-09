@@ -128,7 +128,7 @@ class APIController
             else
             {
                 $view->set('type', 'danger');
-                $view->set('message', 'Failed to send email.');
+                $view->set('message', 'Username and email do not match.');
                 return $view->render('Components/Alert');
             }
         }
