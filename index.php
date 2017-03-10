@@ -4,9 +4,8 @@
 
     require_once('app/brain/functions.php');
     require_once('vendor/autoload.php');
-    use ovl\app\brain\Router;
 
-    $app = Router::C();
+    $app = \ovl\app\brain\Router::C();
 
     // Настройки приложения
     define('BASE', __DIR__);
@@ -20,7 +19,6 @@
     $app->add('/user/login', 'APIController#userLogin');
     $app->add('/user/register', 'APIController#userRegister');
     $app->add('/user/restore', 'APIController#userRestore');
-
 
     $app->deploy();
 ?>
