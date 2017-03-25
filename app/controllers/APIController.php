@@ -57,7 +57,7 @@ class APIController
                 if($model->checkUser($_POST['register-username'])->num_rows > 0)
                 {
                     $view->set('type', 'danger');
-                    $view->set('message', 'Username already in use.');
+                    $view->set('message', 'Username already used.');
                     return $view->render('Components/Alert');
                 }
             }
