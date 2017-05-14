@@ -1,0 +1,13 @@
+.bg-navbar
+{
+    background-color: #455a64;
+}
+.navbar-toggler
+{
+    border: 0;
+}
+.auth
+{
+    position: absolute!important;
+    right: 1rem;
+}

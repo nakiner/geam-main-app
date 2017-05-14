@@ -1,8 +1,8 @@
 <?php
 
-namespace ovl\app\controllers;
+namespace app\controllers;
 
-use ovl\app\brain\View;
+use app\core\View;
 
 class ViewController
 {
@@ -13,20 +13,24 @@ class ViewController
 
     public function index()
     {
-        $this->view->set('title', 'Ovl - Main');
-        $this->view->render('Pages/index/index');
+        $this->view->set('title', 'Index');
+        $this->view->set('component', 'pages/index');
+        return $this->view->renderPage();
     }
 
-    public function news()
+    public function news($id = ['news' => 0])
     {
-        $this->view->set('title', 'Ovl - News');
-        $this->view->render('Pages/news/index');
+        $this->view->set('news_id', $id['news']);
+        $this->view->set('title', 'News');
+        $this->view->set('component', 'pages/news');
+        return $this->view->renderPage();
     }
 
     public function user()
     {
-        $this->view->set('title', 'Ovl - Account');
-        $this->view->render('Pages/user/index');
-        unset($_SESSION['ovl_user']);
+        if(!IsUser()) return $this->view->render('templates/error');
+        $this->view->set('title', 'Account');
+        $this->view->set('component', 'pages/user');
+        return $this->view->renderPage();
     }
 }

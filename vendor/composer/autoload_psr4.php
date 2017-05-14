@@ -6,9 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ovl\\app\\views\\' => array($baseDir . '/app/views'),
-    'ovl\\app\\models\\' => array($baseDir . '/app/models'),
-    'ovl\\app\\controllers\\' => array($baseDir . '/app/controllers'),
-    'ovl\\app\\brain\\' => array($baseDir . '/app/brain'),
-    'ovl\\app\\' => array($baseDir . '/app'),
+    'app\\views\\' => array($baseDir . '/app/views'),
+    'app\\models\\' => array($baseDir . '/app/models'),
+    'app\\core\\' => array($baseDir . '/app/core'),
+    'app\\controllers\\' => array($baseDir . '/app/controllers'),
+    'app\\' => array($baseDir . '/app'),
 );

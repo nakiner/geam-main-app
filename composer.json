@@ -1,14 +1,17 @@
 {
 	"autoload":{
 		"psr-4":{
-			"ovl\\app\\": "./app",
-			"ovl\\app\\brain\\": "./app/brain",
-			"ovl\\app\\controllers\\": "./app/controllers",
-			"ovl\\app\\models\\": "./app/models",
-			"ovl\\app\\views\\": "./app/views"
+			"app\\": "./app",
+			"app\\core\\": "./app/core",
+			"app\\controllers\\": "./app/controllers",
+			"app\\models\\": "./app/models",
+			"app\\views\\": "./app/views"
 		}
 	},
 	"config": {
 		"optimize-autoloader": false
+	},
+	"require": {
+		"phpmailer/phpmailer": "^5.2"
 	}
 }

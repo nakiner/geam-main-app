@@ -1,7 +1,7 @@
 <?php
 
-namespace ovl\app\models;
-use ovl\app\brain\Model;
+namespace app\models;
+use app\core\Model;
 
 class IndexModel
 {
@@ -12,11 +12,18 @@ class IndexModel
 
     public function getMenuItems()
     {
-        return $this->db->Get('ovl_menu');
+        return $this->db->Get('menu');
     }
 
-    public function getNews()
+    public function getNews($id = 0)
     {
-        return $this->db->query("SELECT * FROM ovl_news ORDER BY itemDate DESC");
+        if($id > 0) return $this->db->query("SELECT * FROM news WHERE id = '$id'");
+        return $this->db->query("SELECT * FROM news ORDER BY itemDate DESC");
+    }
+    public function addNews($title, $text)
+    {
+        $now = $this->db->query("SELECT NOW()")->fetch_assoc()['NOW()'];
+        $user = $_SESSION['web_user']['userName'];
+        return $this->db->query("INSERT INTO news (itemTitle, itemContent, itemDate, itemBy) VALUES ('$title', '$text', '$now', '$user')");
     }
 }

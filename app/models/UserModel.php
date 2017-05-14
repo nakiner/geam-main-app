@@ -1,6 +1,6 @@
 <?php
-namespace ovl\app\models;
-use ovl\app\brain\Model;
+namespace app\models;
+use app\core\Model;
 
 class UserModel
 {
@@ -45,23 +45,19 @@ class UserModel
         setcookie('ovl_session', $rand, $when, '/', 'ovl.io', true, true);
     }*/
 
-    public function getUser($login, $pwd)
-    {
-        return $this->db->query("SELECT id,userName,displayName,userEmail FROM ovl_accounts WHERE userName = '$login' AND userPwd = '$pwd'");
-    }
-
     public function addUser($username, $name, $pwd, $email)
     {
         $ip = $_SERVER['REMOTE_ADDR'];
-        return $this->db->query("INSERT INTO ovl_accounts (userName, displayName, userPwd, userEmail, ip) VALUES ('$username', '$name', '$pwd', '$email', '$ip')");
+        return $this->db->query("INSERT INTO accounts (userName, displayName, userPwd, userEmail, ip) VALUES ('$username', '$name', '$pwd', '$email', '$ip')");
     }
 
-    public function checkUser($username)
+    public function getData($who, $fields)
     {
-        return $this->db->query("SELECT id from ovl_accounts WHERE userName = '$username'");
+        return $this->db->query("SELECT $fields FROM accounts WHERE userName = '$who'");
     }
-    public function checkEmail($username, $email)
+
+    public function setUser($who, $field, $value)
     {
-        return $this->db->query("SELECT displayName FROM ovl_accounts WHERE userName = '$username' AND userEmail = '$email'");
+        return $this->db->query("UPDATE accounts SET $field = '$value' WHERE userName = '$who'");
     }
 }

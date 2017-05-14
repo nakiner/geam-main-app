@@ -21,7 +21,7 @@
                                 <div class="form-group row">
                                     <label for="login-username" class="col-sm-2 col-form-label">Username</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="login-username" name="login-username" placeholder="Your login" required autofocus>
+                                        <input type="text" class="form-control" id="login-username" name="login-username" placeholder="Your login" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -44,19 +44,19 @@
                                 <div class="form-group row">
                                     <label for="register-username" class="col-sm-2 col-form-label">Username</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="register-username" name="register-username" placeholder="Your exact username" required autofocus>
+                                        <input type="text" class="form-control" id="register-username" name="register-username" placeholder="Your exact username" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="register-name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="register-name" name="register-name" placeholder="This name will be displayed" required autofocus>
+                                        <input type="text" class="form-control" id="register-name" name="register-name" placeholder="This name will be displayed" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="register-email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="register-email" name="register-email" placeholder="Email for password restore" required autofocus>
+                                        <input type="text" class="form-control" id="register-email" name="register-email" placeholder="Email for password restore" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -85,7 +85,7 @@
                                 <div class="form-group row">
                                     <label for="restore-username" class="col-sm-2 col-form-label">Username</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="restore-username" name="restore-username" placeholder="Your username" required autofocus>
+                                        <input type="text" class="form-control" id="restore-username" name="restore-username" placeholder="Your username" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
