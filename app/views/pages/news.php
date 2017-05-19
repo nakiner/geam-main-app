@@ -6,7 +6,7 @@
     {
         $this->set('type', 'danger');
         $this->set('message', 'Seems like there is no news.');
-        $this->render('Components/Alert');
+        $this->render('components/alert');
     }
 ?>
 <div class="row">
